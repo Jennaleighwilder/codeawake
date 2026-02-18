@@ -1,0 +1,15 @@
+Title:
+Explain inherited codebases instantly (CLI tool)
+
+Body:
+
+Developers are inheriting more code they didn't write—from AI, from departed teammates, from late-night clones. Figuring out where to start usually means an hour of poking around.
+
+I built a CLI that scans a repo and prints a structured briefing: project type, entry point, core files, what's safe to edit vs risky, and a rough data flow. It runs locally with no setup. First run uses heuristics only; you can add an Anthropic API key for semantic analysis.
+
+npx codeawake
+
+Repo: https://github.com/Jennaleighwilder/codeawake
+Demo output on real repos: https://github.com/Jennaleighwilder/codeawake/blob/main/DEMO.md
+
+Curious if this matches how other teams are experiencing AI-generated codebases.

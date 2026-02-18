@@ -1,0 +1,28 @@
+Target: r/programming
+
+---
+
+I kept opening repos and spending an hour figuring out where to start, especially with AI-generated code, so I built a CLI that briefs the project before you touch anything.
+
+Run it in any directory and it prints a structured orientation: project type, entry point, core files, safe vs risky areas, and a rough data flow. Works without an API key (local heuristics) or with one for deeper analysis.
+
+Example output:
+
+```
+PROJECT TYPE:     Node.js project
+MAIN PURPOSE:     Web application (Next.js detected)
+ENTRY POINT:      app/page.tsx
+
+HOW TO RUN:       npm install && npm start
+
+CORE FILES (start here):
+  app/page.tsx              Main entry point
+  lib/utils.ts              Important source file
+
+SAFE TO EDIT:     components/, fonts/
+RISKY:            config/, package.json
+```
+
+npx codeawake
+
+Repo: https://github.com/Jennaleighwilder/codeawake
