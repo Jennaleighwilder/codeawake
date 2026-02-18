@@ -2,38 +2,36 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CODEAWAKE BRIEFING (Local Analysis)
 
-PROJECT TYPE:     Node.js project
-MAIN PURPOSE:     Node.js application
+PROJECT TYPE:     Research / analysis environment
+MAIN PURPOSE:     Jupyter notebooks and Python scripts
 ENTRY POINT:      Not detected
 
-HOW TO RUN:       npm install && npm start
+HOW TO RUN:       Open notebooks with Jupyter (jupyter notebook)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CORE FILES (likely important):
 
-  backbone.js               Important source file
-  test/collection.js        Important source file
-  test/model.js             Important source file
-  test/router.js            Request routing
+  scipy/thinkstats2.py      Important source file
+  scipy/thinkplot.py        Important source file
+  mapreduce/mr_s3_log_parser.py Important source file
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SAFE TO EDIT (low risk):
 
-  public/
+  styles/
   images/
-  fonts/
-  docs/
+  tests/
   examples/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚠️  RISKY FILES (edit carefully):
 
-  package.json              Dependencies
+  settings/                 Global application settings
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DATA FLOW (estimated):
 
-  HTTP request → routes/ → controllers/ → services/ → database
+  Notebooks and scripts; run cells or execute scripts
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHERE TO START:

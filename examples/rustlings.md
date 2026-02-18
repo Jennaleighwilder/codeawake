@@ -2,43 +2,42 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CODEAWAKE BRIEFING (Local Analysis)
 
-PROJECT TYPE:     Node.js project
-MAIN PURPOSE:     Node.js application
-ENTRY POINT:      Not detected
+PROJECT TYPE:     Rust project
+MAIN PURPOSE:     Rust application
+ENTRY POINT:      src/main.rs
 
-HOW TO RUN:       npm install && npm start
+HOW TO RUN:       cargo build && cargo run
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CORE FILES (likely important):
 
-  backbone.js               Important source file
-  test/collection.js        Important source file
-  test/model.js             Important source file
-  test/router.js            Request routing
+  src/main.rs               Main entry point
+  src/app_state.rs          Important source file
+  src/term.rs               Important source file
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SAFE TO EDIT (low risk):
 
-  public/
+  static/
   images/
-  fonts/
-  docs/
-  examples/
+  tests/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚠️  RISKY FILES (edit carefully):
 
+  config/                   Configuration affects entire app
   package.json              Dependencies
+  src/main.rs               Main entry point - breaks everything if misconfigured
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DATA FLOW (estimated):
 
-  HTTP request → routes/ → controllers/ → services/ → database
+  main.rs or lib.rs → modules → dependencies
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHERE TO START:
 
-  1. Find the entry point (check package.json or main file)
+  1. Read src/main.rs to understand initialization
   2. Look at folder structure to understand organization
   3. Check configuration files for environment setup
   4. Start with safe areas (components, styles) for small changes

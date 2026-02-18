@@ -33,15 +33,24 @@ It scans your project and gives you an **intelligence briefing** in structured f
 Not a README generator. Not AI prose.  
 **A field instrument for situational awareness.**
 
+## Real World Tested
+
+Codeawake has been tested across multiple ecosystems: Next.js, React, Vue, Express, Flask, Django, Rust, and messy legacy repos.
+
 ## Proof It Works
 
 Real examples on actual codebases:
 
-- **[Next.js blog starter](examples/nextjs-blog.md)** - Framework detection, routing
-- **[Express hello-world](examples/express-hello.md)** - API structure
-- **[Flask tutorial](examples/flask-tutorial.md)** - Python web app
-- **[Create React App](examples/react-app.md)** - Frontend structure
-- **[Messy inherited repo](examples/messy-repo.md)** - Real-world chaos
+- **[Next.js Commerce](examples/nextjs-commerce.md)** - vercel/commerce
+- **[Express API](examples/express-api.md)** - node-express-realworld
+- **[Flask Blog](examples/flask-blog.md)** - miguelgrinberg/flasky
+- **[Create React App](examples/react-app.md)** - facebook/create-react-app
+- **[Django](examples/django.md)** - django/djangoproject.com
+- **[Vue](examples/vue-app.md)** - vuejs/create-vue
+- **[Data Science](examples/datascience.md)** - data-science-ipython-notebooks
+- **[Gatsby Blog](examples/gatsby-blog.md)** - gatsby-starter-blog
+- **[Rustlings](examples/rustlings.md)** - rust-lang/rustlings
+- **[Messy Repo](examples/messy-repo.md)** - jashkenas/backbone
 
 All examples use local mode (no API key required).
 

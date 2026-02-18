@@ -1,26 +1,20 @@
-# Example: Flask Tutorial App
-
-**Repo:** https://github.com/pallets/flask/tree/main/examples/tutorial  
-**Command:** `codeawake`  
-**Mode:** Local analysis (no API key)
-
----
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CODEAWAKE BRIEFING (Local Analysis)
 
-PROJECT TYPE:     Python project
-MAIN PURPOSE:     Web service (Flask detected)
-ENTRY POINT:      Not detected
+PROJECT TYPE:     Flask web service
+MAIN PURPOSE:     Web service
+ENTRY POINT:      app/__init__.py
 
-HOW TO RUN:       pip install -r requirements.txt && python main.py
+HOW TO RUN:       pip install -r requirements.txt && flask run
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CORE FILES (likely important):
 
-  flaskr/blog.py            Important source file
-  flaskr/auth.py            Important source file
-  tests/test_blog.py        Important source file
+  app/__init__.py           Main entry point
+  app/models.py             Important source file
+  tests/test_api.py         External service integration
+  config.py                 Configuration file
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SAFE TO EDIT (low risk):
@@ -31,17 +25,20 @@ SAFE TO EDIT (low risk):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚠️  RISKY FILES (edit carefully):
 
+  config/                   Configuration affects entire app
   auth/                     Security-critical code
+  requirements.txt          Python dependencies
+  app/__init__.py           Main entry point - breaks everything if misconfigured
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DATA FLOW (estimated):
 
-  Check entry point and follow imports to understand flow
+  HTTP request → routes/views → models → database
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHERE TO START:
 
-  1. Find the entry point (check package.json or main file)
+  1. Read app/__init__.py to understand initialization
   2. Look at folder structure to understand organization
   3. Check configuration files for environment setup
   4. Start with safe areas (components, styles) for small changes
@@ -54,11 +51,3 @@ WHERE TO START:
    Get your key at: https://console.anthropic.com/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
----
-
-**What this demonstrates:**
-- Detected Flask framework (Web service)
-- Identified flaskr/blog.py, flaskr/auth.py as core files
-- Found static/ and tests/ as safe areas
-- Correctly flagged auth/ as security-critical

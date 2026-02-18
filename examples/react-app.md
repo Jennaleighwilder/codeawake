@@ -1,24 +1,17 @@
-# Example: Create React App
-
-**Repo:** https://github.com/facebook/create-react-app  
-**Command:** `codeawake`  
-**Mode:** Local analysis (no API key)
-
----
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CODEAWAKE BRIEFING (Local Analysis)
 
 PROJECT TYPE:     Node.js project
 MAIN PURPOSE:     Frontend application (React detected)
-ENTRY POINT:      packages/eslint-config-react-app/index.js
+ENTRY POINT:      docusaurus/website/src/pages/index.js
 
 HOW TO RUN:       npm install && npm start
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CORE FILES (likely important):
 
-  packages/eslint-config-react-app/index.js Main entry point
+  docusaurus/website/src/pages/index.js Main entry point
   tasks/cra.js              Important source file
   tasks/screencast.js       Important source file
   test/jest.config.js       Configuration file
@@ -38,7 +31,7 @@ SAFE TO EDIT (low risk):
   config/                   Configuration affects entire app
   middleware/               Affects all requests
   package.json              Dependencies
-  packages/eslint-config-react-app/index.js Main entry point - breaks everything if misconfigured
+  docusaurus/website/src/pages/index.js Main entry point - breaks everything if misconfigured
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DATA FLOW (estimated):
@@ -48,7 +41,7 @@ DATA FLOW (estimated):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHERE TO START:
 
-  1. Read packages/eslint-config-react-app/index.js to understand initialization
+  1. Read docusaurus/website/src/pages/index.js to understand initialization
   2. Look at folder structure to understand organization
   3. Check configuration files for environment setup
   4. Start with safe areas (components, styles) for small changes
@@ -61,11 +54,3 @@ WHERE TO START:
    Get your key at: https://console.anthropic.com/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
----
-
-**What this demonstrates:**
-- Detected React framework (Frontend application)
-- Found entry point in packages/eslint-config-react-app
-- Identified monorepo structure with tasks/ and packages/
-- Flagged config/, middleware/, package.json as risky

@@ -2,43 +2,42 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CODEAWAKE BRIEFING (Local Analysis)
 
-PROJECT TYPE:     Node.js project
-MAIN PURPOSE:     Node.js application
-ENTRY POINT:      Not detected
+PROJECT TYPE:     Gatsby site
+MAIN PURPOSE:     Frontend application (React detected)
+ENTRY POINT:      gatsby-config.js
 
-HOW TO RUN:       npm install && npm start
+HOW TO RUN:       npm install && npm run develop
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CORE FILES (likely important):
 
-  backbone.js               Important source file
-  test/collection.js        Important source file
-  test/model.js             Important source file
-  test/router.js            Request routing
+  gatsby-config.js          Main entry point
+  gatsby-config.js          Configuration file
+  gatsby-node.js            Important source file
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SAFE TO EDIT (low risk):
 
-  public/
+  components/
+  static/
   images/
-  fonts/
-  docs/
-  examples/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚠️  RISKY FILES (edit carefully):
 
+  config/                   Configuration affects entire app
   package.json              Dependencies
+  gatsby-config.js          Main entry point - breaks everything if misconfigured
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DATA FLOW (estimated):
 
-  HTTP request → routes/ → controllers/ → services/ → database
+  Check entry point and follow imports to understand flow
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHERE TO START:
 
-  1. Find the entry point (check package.json or main file)
+  1. Read gatsby-config.js to understand initialization
   2. Look at folder structure to understand organization
   3. Check configuration files for environment setup
   4. Start with safe areas (components, styles) for small changes

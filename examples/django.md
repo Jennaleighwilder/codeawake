@@ -1,34 +1,46 @@
-# Example: Express Hello World
-
-**Repo:** https://github.com/expressjs/express/tree/master/examples/hello-world  
-**Command:** `codeawake`  
-**Mode:** Local analysis (no API key)
-
----
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CODEAWAKE BRIEFING (Local Analysis)
 
-PROJECT TYPE:     Unknown project
-MAIN PURPOSE:     Application (specific purpose unclear from structure)
-ENTRY POINT:      Not detected
+PROJECT TYPE:     Django application
+MAIN PURPOSE:     Web application
+ENTRY POINT:      manage.py
 
-HOW TO RUN:       Check README or package.json for run command
+HOW TO RUN:       pip install -r requirements.txt && python manage.py runserver
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CORE FILES (likely important):
 
-  index.js                  Important source file
+  manage.py                 Main entry point
+  svntogit/mapping.py       Important source file
+  releases/tests.py         Important source file
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SAFE TO EDIT (low risk):
+
+  css/
+  static/
+  docs/
+  tests/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  RISKY FILES (edit carefully):
+
+  config/                   Configuration affects entire app
+  auth/                     Security-critical code
+  middleware/               Affects all requests
+  settings/                 Global application settings
+  manage.py                 Main entry point - breaks everything if misconfigured
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DATA FLOW (estimated):
 
-  Check entry point and follow imports to understand flow
+  HTTP request → routes/views → models → database
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHERE TO START:
 
-  1. Find the entry point (check package.json or main file)
+  1. Read manage.py to understand initialization
   2. Look at folder structure to understand organization
   3. Check configuration files for environment setup
   4. Start with safe areas (components, styles) for small changes
@@ -41,10 +53,3 @@ WHERE TO START:
    Get your key at: https://console.anthropic.com/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
----
-
-**What this demonstrates:**
-- Identified index.js as the main entry point
-- Minimal Express example with simple structure
-- Correctly flagged package.json for run command lookup
