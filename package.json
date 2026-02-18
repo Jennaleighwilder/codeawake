@@ -1,0 +1,35 @@
+{
+  "name": "codeawake",
+  "version": "1.0.0",
+  "description": "Wake up inside any codebase. AI-powered comprehension for inherited code.",
+  "main": "cli.js",
+  "bin": {
+    "codeawake": "./cli.js"
+  },
+  "scripts": {
+    "test": "node cli.js ."
+  },
+  "keywords": [
+    "code",
+    "comprehension",
+    "ai",
+    "documentation",
+    "onboarding",
+    "codebase",
+    "understanding"
+  ],
+  "author": "Jennifer Leigh West <theforgottencode780@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.75.0",
+    "glob": "^10.3.10",
+    "commander": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jennaleighwilder/codeawake"
+  }
+}
