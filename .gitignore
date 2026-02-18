@@ -12,3 +12,5 @@ coverage/
 *.swp
 *.swo
 .vercel
+demo/tmp/
+demo/output/

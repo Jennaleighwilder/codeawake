@@ -4,6 +4,16 @@
 
 AI-powered comprehension for inherited code. Get oriented in seconds, not hours.
 
+## Live Demonstration
+
+See [DEMO.md](DEMO.md) for automatically generated real-world runs against public repositories.
+
+You can reproduce it yourself:
+
+```bash
+npm run demo
+```
+
 ## The Problem
 
 You open a repo. Maybe you pasted code from AI. Maybe you inherited it from a teammate who left. Maybe you cloned it at 11 PM and just need to know where to start.

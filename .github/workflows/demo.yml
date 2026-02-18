@@ -1,0 +1,34 @@
+name: Demo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run demo
+
+      - name: Commit DEMO.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet DEMO.md; then
+            echo "No changes to DEMO.md"
+          else
+            git add DEMO.md
+            git commit -m "chore: update DEMO.md from automated run"
+            git push
+          fi

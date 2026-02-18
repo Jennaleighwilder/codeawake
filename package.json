@@ -7,7 +7,8 @@
     "codeawake": "./cli.js"
   },
   "scripts": {
-    "test": "node cli.js ."
+    "test": "node cli.js .",
+    "demo": "node demo/run-demo.js && node demo/make-report.js"
   },
   "keywords": [
     "code",
